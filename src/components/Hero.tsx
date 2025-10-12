@@ -20,7 +20,7 @@ export default function Hero() {
 
       <section
         id="home"
-        className="relative flex items-center justify-start pt-24 text-white h-screen z-20"
+        className="relative flex items-center justify-start pt-22 text-white h-screen z-20"
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold my-20">
