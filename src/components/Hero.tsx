@@ -20,13 +20,13 @@ export default function Hero() {
 
       <section
         id="home"
-        className="relative z-20 flex items-center justify-center text-white h-screen"
+        className="relative flex items-center justify-start pt-24 text-white h-screen z-20"
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-20">
+          <h1 className="text-5xl font-bold my-20">
             Your Home, Our Craft.
           </h1>
-          <p className="md:text-xl mb-8 text-[#fcecca]">
+          <p className="md:text-xl pt-12 mb-8 text-[#fcecca]">
             Local experts in roofing and renovations — delivering reliable service and lasting results you can trust.
           </p>
 
