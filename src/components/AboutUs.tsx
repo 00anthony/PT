@@ -39,7 +39,7 @@ export default function AboutUs() {
     { name: 'GAF Master Elite Contractor', logo: '/certifications/gaf-master-elite.webp' },
     { name: 'CertainTeed SELECT ShingleMaster', logo: '/certifications/certainteed-select-shingle-master.webp' },
     { name: 'Owens Corning Preferred Contractor', logo: '/certifications/owens-corning.png' },
-    { name: 'OSHA Safety Certified', logo: '/certifications/osha-logo.svg' }
+    { name: 'OSHA Safety Certified', logo: '/certifications/osha-logo.png' }
   ];
 
   return (
