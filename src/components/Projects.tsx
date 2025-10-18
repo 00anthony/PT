@@ -1,4 +1,6 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection';
+import StaggeredAnimation from './StaggeredAnimation';
 
 interface Project {
   img: string;
@@ -17,10 +19,12 @@ export default function Projects() {
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Recent Projects</h2>
+          <AnimatedSection as="h2" className='text-4xl font-bold text-gray-900 mb-4' animation='fade-up'>
+            Recent Projects
+          </AnimatedSection>
           <p className="text-xl text-gray-600">See our quality work in action</p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StaggeredAnimation className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={150} animation='fade-up'>
           {projects.map((project, idx) => (
             <div key={idx} className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
               <img 
@@ -35,7 +39,7 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggeredAnimation>
       </div>
     </section>
   );
