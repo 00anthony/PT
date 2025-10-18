@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei/core';
 import * as THREE from 'three';

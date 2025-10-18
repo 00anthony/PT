@@ -38,7 +38,7 @@ export default function Hero() {
               Free Estimate
             </a>
             <a
-              href="tel:555-0123"
+              href="tel:512-999-4366"
               className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#ccb78a] transition text-center"
             >
               Call Now
