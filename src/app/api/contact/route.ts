@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     // Email to business (with attachments)
     await resend.emails.send({
       from: 'PT Roofing <quotes@mail.ptroofingandrenovations.com>',
-      to: ['anthonytij3@gmail.com'],
+      to: ['ptroofingandrenovations.info@gmail.com'],
       replyTo: email,
       subject: `New Quote Request from ${name}`,
       html: `
