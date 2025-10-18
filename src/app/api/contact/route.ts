@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'PT Roofing <onboarding@resend.dev>', // Replace with your verified domain
+      from: 'PT Roofing <quotes@mail.ptroofingandrenovations.com>', // Replace with your verified domain
       to: ['anthonytij3@gmail.com'], // Your business email
       replyTo: email,
       subject: `New Quote Request from ${name}`,
