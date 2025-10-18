@@ -97,7 +97,7 @@ export default function AboutUs() {
               <h4 className="text-xl font-bold text-gray-900 mb-4">Certifications & Affiliations</h4>
               <StaggeredAnimation className="grid grid-cols-2 sm:grid-cols-4 gap-6" staggerDelay={150} animation='fade-up'>
                 {certifications.map((cert, index) => (
-                  <div key={index} className="flex flex-col justify-end items-center gap-2 p-4 bg-gray-50 rounded-lg">
+                  <div key={index} className="flex flex-col justify-end items-center gap-2 p-4 rounded-lg">
                     <Image 
                       src={cert.logo} 
                       alt={cert.name}
