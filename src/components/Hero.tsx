@@ -50,10 +50,6 @@ export default function Hero() {
               <CheckCircle className="w-5 h-5" />
               <span>Licensed & Insured</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>24/7 Emergency Service</span>
-            </div>
           </div>
         </div>
       </section>

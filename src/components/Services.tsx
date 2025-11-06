@@ -19,7 +19,7 @@ export default function Services() {
     {
       icon: <BrickWallShield className="w-12 h-12" />,
       title: "Siding",
-      description: "Fast and reliable repairs to fix leaks, damaged shingles, and structural issues."
+      description: "Full siding replacements using premium James Hardie® fiber cement. We remove old or damaged wood, vinyl, and warped panels, restoring your home's look and protection."
     },
     {
       icon: <Paintbrush className="w-12 h-12" />,
