@@ -55,7 +55,16 @@ export default function Footer() {
                   ptroofingandrenovations.info@gmail.com
                 </a>
               </li>
-              <li>Austin - San Marcos Area</li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/2500+W+William+Cannon+Dr,+Suite+607,+Austin,+TX+78745"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:underline hover:text-[#ccb78a] transition"
+                >
+                  <p>2500 W William Cannon Dr. Suite 607 Austin, TX 78745</p>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

@@ -234,7 +234,16 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-[#ccb78a] flex-shrink-0" />
                     <div className="min-w-0">
                       <p className="font-semibold text-black">Address</p>
-                      <p className="text-gray-600">Austin - San Marcos Area</p>
+                      <a
+                        href="https://www.google.com/maps/place/2500+W+William+Cannon+Dr,+Suite+607,+Austin,+TX+78745"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:underline"
+                      >
+                        <p>2500 W William Cannon Dr.</p>
+                        <p>Suite 607</p>
+                        <p>Austin, TX 78745</p>
+                      </a>
                     </div>
                   </div>
                 </div>
