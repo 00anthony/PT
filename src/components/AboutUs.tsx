@@ -121,8 +121,6 @@ export default function AboutUs() {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Accent decoration */}
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#ccb78a] opacity-20 rounded-lg -z-10"></div>
           </div>
         </div>
 

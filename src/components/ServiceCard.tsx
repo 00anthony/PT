@@ -43,7 +43,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, className = '', styl
           
           <div className="pt-4 flex items-center gap-2 text-[#ccb78a] font-bold text-xs uppercase tracking-widest group/btn cursor-pointer">
             <span className="relative overflow-hidden h-5 flex items-center">
-              <span className="inline-block transition-transform duration-300 group-hover/btn:-translate-y-full">Learn More</span>
+              <a
+                href='#contact'
+                className="inline-block transition-transform duration-300 group-hover/btn:-translate-y-full">
+                Learn More
+              </a>
               <span className="absolute left-0 top-0 inline-block transition-transform duration-300 translate-y-full group-hover/btn:translate-y-0">Request Quote</span>
             </span>
             <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
