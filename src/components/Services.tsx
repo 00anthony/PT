@@ -21,50 +21,52 @@ export default function Services() {
       icon: <HousePlus className="w-8 h-8" />,
       title: "Roofing",
       description: "Expert installation of residential and commercial roofing systems. We use premium architectural shingles and metal roofing to ensure your home stays dry and secure for decades.",
-      image: "https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&q=80&w=800"
+      image: "/images/services/roofing.avif"
     },
     {
       icon: <BrickWallShield className="w-8 h-8" />,
       title: "Siding",
       description: "Transform your home's curb appeal with James Hardie® fiber cement siding. Our precision installation protects against pests, fire, and extreme weather while mimicking natural wood.",
-      image: "/images/siding.jpg"
-    },
-    {
-      icon: <Wind className="w-8 h-8" />,
-      title: "HVAC",
-      description: "Smart climate control solutions for your home. From high-efficiency AC units to modern heating systems, we ensure perfect temperatures and air quality regardless of the season.",
-      image: "/images/repair.jpg"
-    },
-    {
-      icon: <Droplets className="w-8 h-8" />,
-      title: "Water Heating",
-      description: "Never run out of hot water again. We specialize in tankless water heaters and energy-efficient traditional tanks that lower your utility bills and provide instant comfort.",
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      icon: <Paintbrush className="w-8 h-8" />,
-      title: "Painting",
-      description: "Master-level interior and exterior finishes. Our meticulous preparation and premium paints create long-lasting, beautiful results that breathe new life into your living spaces.",
-      image: "/images/painting.jpg"
-    },
-    {
-      icon: <Grid2X2 className="w-8 h-8" />,
-      title: "Windows",
-      description: "Advanced energy-efficient window systems. Reduce noise and heat loss with our wide selection of double and triple-pane windows custom-fitted to your home's unique style.",
-      image: "/images/windows.jpg"
-    },
-    {
-      icon: <Sofa className="w-8 h-8" />,
-      title: "Interior",
-      description: "Bespoke kitchen and bathroom remodeling. From structural changes to finishing touches, we handle every aspect of your interior renovation with expert craftsmanship.",
-      image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800"
+      image: "/images/services/siding.jpg"
     },
     {
       icon: <TreePalm className="w-8 h-8" />,
       title: "Patio",
       description: "Exquisite outdoor living environments. We design and build custom decks, stone patios, and pergolas that turn your backyard into a luxury private retreat.",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
+      image: "/images/services/patio.avif"
     },
+    {
+      icon: <Paintbrush className="w-8 h-8" />,
+      title: "Painting",
+      description: "Master-level interior and exterior finishes. Our meticulous preparation and premium paints create long-lasting, beautiful results that breathe new life into your living spaces.",
+      image: "/images/services/painting.jpg"
+    },
+    {
+      icon: <Wind className="w-8 h-8" />,
+      title: "HVAC",
+      description: "Smart climate control solutions for your home. From high-efficiency AC units to modern heating systems, we ensure perfect temperatures and air quality regardless of the season.",
+      image: "/images/services/repair.jpg"
+    },
+    {
+      icon: <Droplets className="w-8 h-8" />,
+      title: "Water Heating",
+      description: "Never run out of hot water again. We specialize in tankless water heaters and energy-efficient traditional tanks that lower your utility bills and provide instant comfort.",
+      image: "/images/services/water-heating.avif"
+    },
+    
+    {
+      icon: <Grid2X2 className="w-8 h-8" />,
+      title: "Windows",
+      description: "Advanced energy-efficient window systems. Reduce noise and heat loss with our wide selection of double and triple-pane windows custom-fitted to your home's unique style.",
+      image: "/images/services/windows.jpg"
+    },
+    {
+      icon: <Sofa className="w-8 h-8" />,
+      title: "Interior",
+      description: "Bespoke kitchen and bathroom remodeling. From structural changes to finishing touches, we handle every aspect of your interior renovation with expert craftsmanship.",
+      image: "/images/services/interior.avif"
+    },
+    
   ];
 
   return (
@@ -95,7 +97,11 @@ export default function Services() {
           animation="fade-up"
         >
           {services.map((service, idx) => (
-            <ServiceCard key={idx} service={service} />
+            <ServiceCard 
+              key={idx} 
+              service={service}
+              style={{ contentVisibility: 'auto'}} 
+            />
           ))}
         </StaggeredAnimation>
 
