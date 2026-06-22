@@ -261,7 +261,7 @@ function ProjectCardItem({ project }: { project: ProjectCard }) {
               ))}
             </div>
             <p className="text-[#F7F4EF]/80 text-sm leading-relaxed italic mb-2.5">
-              "{project.review.text}"
+              &ldquo;{project.review.text}&rdquo;
             </p>
             <p className="text-[#8A9BB0] text-[11px] font-semibold tracking-wide">
               — {project.review.author}
