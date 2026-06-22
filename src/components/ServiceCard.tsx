@@ -44,7 +44,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, className = '', styl
           <div className="pt-4 flex items-center gap-2 text-[#ccb78a] font-bold text-xs uppercase tracking-widest group/btn cursor-pointer">
             <span className="relative overflow-hidden h-5 flex items-center">
               <a
-                href='/#contact'
+                href='#contact'
                 className="inline-block duration-300 ">
                 Learn More
               </a>
