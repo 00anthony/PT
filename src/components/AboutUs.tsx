@@ -113,11 +113,12 @@ export default function AboutUs() {
           </div>
           
           <div className="relative">
-            <div className="aspect-square rounded-lg overflow-hidden shadow-2xl">
+            <div className=" rounded-lg overflow-hidden shadow-2xl">
               <Image 
-                src="/images/bathroom.webp" 
-                alt="bathroom"
-                fill
+                src="/images/about/advert.webp" 
+                alt="ad"
+                width={640}
+                height={800}
                 className="w-full h-full object-cover"
               />
             </div>
