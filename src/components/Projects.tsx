@@ -287,7 +287,7 @@ export default function RenovationPortfolio() {
     : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="min-h-screen bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="min-h-screen bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <AnimatedSection className='text-center mb-20' animation='fade-up'>
         <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-[#ccb78a]/10 border border-[#ccb78a]/20">
