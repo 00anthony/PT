@@ -346,29 +346,21 @@ export default function RenovationPortfolio() {
       )}
 
       {/* Footer: note + See More */}
-      <div className="max-w-6xl mx-auto mt-14 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto mt-14 flex flex-col px-4 sm:px-6 lg:px-8 items-center justify-between gap-4">
         <p className="text-[#8A9BB0]/50 text-xs tracking-widest uppercase">
           All photos taken by our team on-site
         </p>
-        {/*
-        <a
-          href="/portfolio"
-          className="group inline-flex items-center gap-2.5 bg-[#C4A882] hover:bg-[#d4b894] text-[#1C2331] text-[12px] font-extrabold tracking-[0.14em] uppercase px-6 py-3 rounded-full shadow-lg shadow-[#C4A882]/20 transition-all duration-200 hover:shadow-[#C4A882]/30 hover:shadow-xl"
-        >
-          See More
-          <svg
-            className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-            fill="none"
-            viewBox="0 0 14 14"
-            stroke="currentColor"
-            strokeWidth="2.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M1 7h12M8 2l5 5-5 5" />
-          </svg>
-        </a>
-        */}
+        <AnimatedSection className="mt-4 text-center" animation="fade-up" delay={500}>
+          <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow">
+            <h4 className="text-2xl font-bold text-gray-900 mb-2">See something you like?</h4>
+            <p className="text-gray-600 mb-6">request a free quote on your own project today.</p>
+            <a 
+              href="#contact"
+              className="bg-gray-900 text-white px-6 py-4 rounded-xl font-bold hover:bg-black cursor-pointer transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 whitespace-normal text-center inline-block">
+              Contact for custom project
+            </a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
