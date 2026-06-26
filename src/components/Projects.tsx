@@ -65,17 +65,17 @@ const projects: ProjectCard[] = [
   },
   {
     id: 4,
-    title: "Brick Facade Restoration",
-    location: "Georgetown, TX",
-    category: "Other",
-    services: ["Tuckpointing", "Brick Cleaning", "Waterproof Coating"],
-    timeline: "January 2024 · 4 days",
+    title: "Siding & Roof Remodel",
+    location: "Austin, TX",
+    category: "Siding",
+    services: ["Vinyl Siding", "Metal Roofing", "Painting"],
+    timeline: "January 2024 · 10 days",
     review: {
-      text: "Decades of grime gone. The tuckpointing alone made the whole structure look new again.",
+      text: "PT made my house looking completely brand new. I can't thank them enough for their elite level of craftmanship.",
       author: "Donna P.",
     },
-    before: "/images/portfolio/siding-before.webp",
-    after: "/images/portfolio/siding-after.webp",
+    before: "/images/portfolio/siding-roof-before.webp",
+    after: "/images/portfolio/siding-roof-after.webp",
   },
 ];
 
