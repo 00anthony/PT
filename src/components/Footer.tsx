@@ -68,8 +68,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 py-2 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-8 py-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center text-gray-400 text-sm">
           <p>&copy; 2025 PT ROOFING AND RENOVATIONS LLC. All rights reserved.</p>
+          <a href="/privacy-policy" className="hover:text-white hover:underline">Privacy Policy</a>
         </div>
       </div>
     </footer>
