@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
-        <p className="text-gray-500 mb-10">Last updated: September 8, 2026</p>
+        <p className="text-gray-500 mb-10">Last updated: October 2, 2026</p>
 
         <div className="space-y-10 text-gray-700 leading-relaxed">
           <section>
@@ -41,6 +41,13 @@ export default function PrivacyPolicy() {
               the site that referred you to us. Google Analytics uses cookies and similar technologies to
               do this.
             </p>
+            <p className="mt-3">
+              We also use Google Ads conversion tracking to measure how well our advertising works. When
+              you arrive on our site from one of our Google ads, Google Ads may set a cookie so that when
+              you submit our contact form, or click our phone number or email address, Google can
+              report that action back to us as a lead. This tells us which ads lead to inquiries, but it
+              does not give us personal information about you beyond what you choose to submit.
+            </p>
           </section>
 
           <section>
@@ -49,6 +56,7 @@ export default function PrivacyPolicy() {
               <li>To respond to your quote requests and contact you about your project</li>
               <li>To operate, maintain, and improve our website</li>
               <li>To understand how visitors find and use our site (via Google Analytics)</li>
+              <li>To measure the effectiveness of our advertising (via Google Ads conversion tracking)</li>
             </ul>
             <p className="mt-3">
               We do not sell your personal information.
@@ -56,9 +64,9 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Cookies &amp; Google Analytics</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Cookies, Google Analytics &amp; Google Ads</h2>
             <p className="mb-3">
-              This site uses cookies placed by Google Analytics to distinguish visitors and measure site
+              This site uses cookies placed by Google Analytics and Google Ads to distinguish visitors and measure site
               usage. You can control or disable cookies through your browser settings, or opt out of
               Google Analytics tracking across all websites using the{' '}
               <a
@@ -68,6 +76,18 @@ export default function PrivacyPolicy() {
                 className="text-[#ccb78a] hover:underline"
               >
                 Google Analytics Opt-out Browser Add-on
+              </a>.
+            </p>
+            <p className="mb-3">
+              You can manage how Google uses your information for advertising, including opting out of
+              personalized ads, at{' '}
+              <a
+                href="https://adssettings.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#ccb78a] hover:underline"
+              >
+                Google&apos;s My Ad Center
               </a>.
             </p>
             <p>
@@ -88,7 +108,7 @@ export default function PrivacyPolicy() {
             <p>
               We do not sell or rent your personal information. We may share information with service
               providers who help us operate this website and process your requests (such as Google
-              Analytics), and as required by law.
+              Analytics and Google Ads), and as required by law.
             </p>
           </section>
 
@@ -96,8 +116,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Data Retention</h2>
             <p>
               We keep contact form submissions as long as needed to respond to your request and for our
-              business records. Analytics data is retained according to Google Analytics&apos; standard
-              retention settings.
+              business records. Analytics and advertising data is retained according to Google Analytics&apos; and
+              Google Ads&apos; standard retention settings.
             </p>
           </section>
 
