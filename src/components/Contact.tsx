@@ -4,6 +4,12 @@ import { Phone, Mail, MapPin, Upload, X, ChevronRight, ChevronLeft } from 'lucid
 import AnimatedSection from './AnimatedSection';
 import SuccessModal from './SuccessModal';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 interface FormData {
   name: string;
   email: string;
@@ -65,6 +71,11 @@ export default function Contact() {
       if (!response.ok) {
         throw new Error('Failed to send message');
       }
+
+      // Google Ads lead conversion: contact form submission
+      window.gtag?.('event', 'conversion', {
+        send_to: 'AW-18490098103/pFj8COXrmI4dELeD4vBE',
+      });
 
       setSubmitStatus('success');
       setShowSuccessModal(true);

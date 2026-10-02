@@ -43,6 +43,15 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-HFWG093JH2');
+            gtag('config', 'AW-18490098103');
+
+            // Google Ads lead conversion: phone and email link clicks
+            document.addEventListener('click', function (e) {
+              var link = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+              if (link) {
+                gtag('event', 'conversion', { 'send_to': 'AW-18490098103/pFj8COXrmI4dELeD4vBE' });
+              }
+            });
           `}
         </Script>
       </head>
