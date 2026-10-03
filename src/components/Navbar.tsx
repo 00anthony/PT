@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import SpinningLogo from '@/components/SpinningLogo'
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,9 +57,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <div className="mt-[-12px]">
-              <SpinningLogo />
-            </div>
+            <Image
+              src="/logo/logo-no-words.svg"
+              alt="PT Roofing & Renovations logo"
+              width={58}
+              height={64}
+              priority
+              className="h-16 w-auto"
+            />
             <span className="w-52 ml-4 leading-6 text-2xl text-black">
               PT ROOFING & RENOVATIONS
             </span>

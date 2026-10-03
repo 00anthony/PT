@@ -8,8 +8,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,10 +20,10 @@
 @font-face {
     font-family: 'copperplate_ccbold';
     src: url('/fonts/copperplatecc-bold-webfont.woff2') format('woff2'),
-         url('/fonts/copperplatecc-bold-webfont.woff') format('woff'),
-         url('/fonts/copperplatecc-bold-webfont.svg') format('svg');
+         url('/fonts/copperplatecc-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 
 }
 

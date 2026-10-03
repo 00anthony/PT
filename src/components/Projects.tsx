@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -126,10 +127,12 @@ function BeforeAfterSlider({ before, after, title }: { before: string; after: st
       onTouchStart={onTouchStart}
     >
       {/* AFTER (base layer) */}
-      <img
+      <Image
         src={after}
         alt={`${title} after`}
-        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        sizes="(min-width: 1152px) 576px, (min-width: 640px) 50vw, 100vw"
+        className="object-cover"
         draggable={false}
       />
 
@@ -138,10 +141,12 @@ function BeforeAfterSlider({ before, after, title }: { before: string; after: st
         className="absolute inset-0 overflow-hidden"
         style={{ width: `${position}%` }}
       >
-        <img
+        <Image
           src={before}
           alt={`${title} before`}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          sizes="(min-width: 1152px) 576px, (min-width: 640px) 50vw, 100vw"
+          className="object-cover"
           style={{ width: `${10000 / position}%`, maxWidth: "none" }}
           draggable={false}
         />

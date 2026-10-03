@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import { Service } from '../types';
 
@@ -16,11 +17,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, className = '', styl
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={service.image} 
+        <Image
+          src={service.image}
           alt={service.title}
-          loading='lazy' 
-          className="h-full w-full object-cover transition-transform duration-700 will-change-transform "
+          fill
+          sizes="(min-width: 1280px) 300px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          className="object-cover transition-transform duration-700 will-change-transform "
         />
         {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 transition-opacity duration-300 group-hover:opacity-95"></div>
