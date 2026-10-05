@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------
+   PT ROOFING & RENOVATIONS — Design Tokens
+
+   Token names are shared with the base template so components stay
+   portable between sites; only the values below are PT-specific.
+
+     --ink        #FFFFFF   page background
+     --charcoal   #F7F5F0   raised surface / card background (warm white)
+     --charcoal-2 #E6E0D3   borders, dividers
+     --oxblood    #CCB78A   brand gold — button / badge fills (dark text on top)
+     --oxblood-lt #806A3F   deep gold — accent text & icons on white (AA contrast)
+     --concrete   #1F1D1A   primary text
+     --steel      #6B665C   muted / secondary text
+
+   Type:
+     --font-display  Copperplate — PT's brand face, headlines only
+     --font-body     Inter — paragraphs and UI
+     --font-mono     Inter — small uppercase labels (tracking does the work)
+--------------------------------------------------------------------- */
+
+:root {
+  --ink: #ffffff;
+  --charcoal: #f7f5f0;
+  --charcoal-2: #e6e0d3;
+  --oxblood: #ccb78a;
+  --oxblood-lt: #806a3f;
+  --concrete: #1f1d1a;
+  --steel: #6b665c;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-2: var(--charcoal-2);
+  --color-oxblood: var(--oxblood);
+  --color-oxblood-light: var(--oxblood-lt);
+  --color-concrete: var(--concrete);
+  --color-steel: var(--steel);
+
+  --font-display: var(--font-copperplate);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-inter);
+
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pulsing ring on the service-area map hub — transform/opacity only. */
+@keyframes map-pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  70%,
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.map-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-pulse 3s ease-out infinite;
+}
+
+* {
+  border-color: var(--charcoal-2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--concrete);
+  font-family: var(--font-body);
+}
+
+/* Scroll reveal (components/ui/Reveal.tsx) — CSS-only so content is in the
+   HTML from the first paint; JS only adds the "is-visible" class. */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 24px));
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* Without JS the content must still show */
+@media (scripting: none) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--oxblood);
+  color: var(--concrete);
+}
+
+/* visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--oxblood-lt);
+  outline-offset: 3px;
+}
