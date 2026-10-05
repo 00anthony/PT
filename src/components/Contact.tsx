@@ -7,6 +7,7 @@ import SuccessModal from './SuccessModal';
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -72,10 +73,11 @@ export default function Contact() {
         throw new Error('Failed to send message');
       }
 
-      // Google Ads lead conversion: contact form submission
+      // Lead conversion: Google Ads + Meta standard "Lead" event (no form data sent)
       window.gtag?.('event', 'conversion', {
         send_to: 'AW-18490098103/pFj8COXrmI4dELeD4vBE',
       });
+      window.fbq?.('track', 'Lead');
 
       setSubmitStatus('success');
       setShowSuccessModal(true);

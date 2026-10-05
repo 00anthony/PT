@@ -34,17 +34,44 @@ export default function RootLayout({
             gtag('config', 'G-HFWG093JH2');
             gtag('config', 'AW-18490098103');
 
-            // Google Ads lead conversion: phone and email link clicks
+            // Lead tracking for phone and email link clicks:
+            // Google Ads conversion + Meta standard "Contact" event
             document.addEventListener('click', function (e) {
               var link = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
               if (link) {
                 gtag('event', 'conversion', { 'send_to': 'AW-18490098103/pFj8COXrmI4dELeD4vBE' });
+                if (window.fbq) window.fbq('track', 'Contact');
               }
             });
           `}
         </Script>
+        {/* Meta Pixel */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2200568067511210');
+            fbq('track', 'PageView');
+          `}
+        </Script>
       </head>
       <body className="antialiased">
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=2200568067511210&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         <Navbar />
         {children}
         <Footer />

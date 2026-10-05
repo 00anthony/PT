@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
-        <p className="text-gray-500 mb-10">Last updated: October 2, 2026</p>
+        <p className="text-gray-500 mb-10">Last updated: October 5, 2026</p>
 
         <div className="space-y-10 text-gray-700 leading-relaxed">
           <section>
@@ -48,6 +48,13 @@ export default function PrivacyPolicy() {
               report that action back to us as a lead. This tells us which ads lead to inquiries, but it
               does not give us personal information about you beyond what you choose to submit.
             </p>
+            <p className="mt-3">
+              We also use the Meta Pixel, a tool from Meta Platforms (the company behind Facebook and Instagram). It
+              records which pages you visit on our site and whether you submit our contact form or click our phone
+              number or email address, and links that activity to your browser using cookies. We use it to measure
+              how well our Facebook and Instagram ads work and to show our ads to people who have visited our site.
+              The contents of our contact form are not sent to Meta.
+            </p>
           </section>
 
           <section>
@@ -56,7 +63,8 @@ export default function PrivacyPolicy() {
               <li>To respond to your quote requests and contact you about your project</li>
               <li>To operate, maintain, and improve our website</li>
               <li>To understand how visitors find and use our site (via Google Analytics)</li>
-              <li>To measure the effectiveness of our advertising (via Google Ads conversion tracking)</li>
+              <li>To measure the effectiveness of our advertising (via Google Ads conversion tracking and the Meta Pixel)</li>
+              <li>To show our ads on Facebook and Instagram to people who have visited our site (via the Meta Pixel)</li>
             </ul>
             <p className="mt-3">
               We do not sell your personal information.
@@ -64,9 +72,9 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Cookies, Google Analytics &amp; Google Ads</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Cookies, Google &amp; Meta</h2>
             <p className="mb-3">
-              This site uses cookies placed by Google Analytics and Google Ads to distinguish visitors and measure site
+              This site uses cookies placed by Google Analytics, Google Ads, and the Meta Pixel to distinguish visitors and measure site
               usage. You can control or disable cookies through your browser settings, or opt out of
               Google Analytics tracking across all websites using the{' '}
               <a
@@ -101,6 +109,15 @@ export default function PrivacyPolicy() {
                 policies.google.com/privacy
               </a>.
             </p>
+            <p className="mt-3">
+              You can control how Meta uses your activity on other websites for ads in your{' '}
+              <a href="https://www.facebook.com/adpreferences/ad_settings" target="_blank" rel="noopener noreferrer" className="text-[#806a3f] underline hover:text-gray-900">
+                Facebook ad preferences
+              </a>, and learn more in{' '}
+              <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener noreferrer" className="text-[#806a3f] underline hover:text-gray-900">
+                Meta&apos;s Privacy Policy
+              </a>.
+            </p>
           </section>
 
           <section>
@@ -108,7 +125,7 @@ export default function PrivacyPolicy() {
             <p>
               We do not sell or rent your personal information. We may share information with service
               providers who help us operate this website and process your requests (such as Google
-              Analytics and Google Ads), and as required by law.
+              Analytics, Google Ads, and Meta), and as required by law.
             </p>
           </section>
 
@@ -116,8 +133,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Data Retention</h2>
             <p>
               We keep contact form submissions as long as needed to respond to your request and for our
-              business records. Analytics and advertising data is retained according to Google Analytics&apos; and
-              Google Ads&apos; standard retention settings.
+              business records. Analytics and advertising data is retained according to the standard retention settings of
+              Google Analytics, Google Ads, and Meta.
             </p>
           </section>
 
