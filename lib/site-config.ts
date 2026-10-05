@@ -49,6 +49,9 @@ export const siteConfig = {
     adsId: "AW-18490098103",
     // One "Website lead" conversion — fired for form submits, phone clicks and email clicks.
     leadConversion: "AW-18490098103/pFj8COXrmI4dELeD4vBE",
+    // Meta (Facebook/Instagram) Pixel — PageView on every route, Lead on form submit,
+    // Contact on phone/email clicks.
+    metaPixelId: "2200568067511210",
   },
   mail: {
     // Overridable with RESEND_FROM_EMAIL / CLIENT_NOTIFICATION_EMAIL env vars.
