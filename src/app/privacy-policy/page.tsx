@@ -164,7 +164,7 @@ export default function PrivacyPolicy() {
               >
                 ptroofingandrenovations.info@gmail.com
               </a>{' '}
-              or (512) 999-4366.
+              or (737) 770-2607.
             </p>
           </section>
         </div>

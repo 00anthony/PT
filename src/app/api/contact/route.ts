@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
           <!-- Contact Info -->
           <div style="background: #ccb78a; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
             <h3 style="margin-top: 0; color: white;">Need to Reach Us?</h3>
-            <p style="margin: 5px 0;">📞 Phone: (512) 999-4366</p>
+            <p style="margin: 5px 0;">📞 Phone: (737) 770-2607</p>
             <p style="margin: 5px 0;">📧 Email: ptroofingandrenovations.info@gmail.com</p>
             <p style="margin: 5px 0;">📍 Austin - San Marcos Area</p>
           </div>

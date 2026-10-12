@@ -224,10 +224,10 @@ export default function Contact() {
                     <div className="min-w-0">
                       <p className="font-semibold text-black">Phone</p>
                       <a
-                        href="tel:512-999-4366"
+                        href="tel:+17377702607"
                         className="text-gray-600 hover:text-[#ccb78a] transition"
                       >
-                        (512) 999-4366
+                        (737) 770-2607
                       </a>
                     </div>
                   </div>
