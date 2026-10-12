@@ -2,16 +2,28 @@ import { siteConfig } from "../../lib/site-config";
 
 // Positions are projected from real lat/lng (roughly to scale), with the hub
 // at PT's South Austin office — a coverage diagram, not a navigational map.
-const nodes = [
+type MapNode = {
+  name: string;
+  x: number;
+  y: number;
+  hub?: boolean;
+  /** Beyond the map's scale — drawn at the edge with a dashed line. */
+  far?: boolean;
+  /** Put the label beside the dot instead of above it, where neighbors would collide. */
+  label?: "left" | "right";
+};
+
+const nodes: MapNode[] = [
   { name: "Austin", x: 130, y: 205, hub: true },
   { name: "Georgetown", x: 168, y: 38 },
   { name: "Leander", x: 100, y: 58 },
-  { name: "Round Rock", x: 168, y: 86 },
-  { name: "Cedar Park", x: 112, y: 86 },
+  { name: "Round Rock", x: 168, y: 86, label: "right" },
+  { name: "Cedar Park", x: 112, y: 86, label: "left" },
   { name: "Pflugerville", x: 196, y: 120 },
   { name: "Buda", x: 104, y: 256 },
   { name: "Kyle", x: 88, y: 294 },
   { name: "San Marcos", x: 64, y: 338 },
+  { name: "San Antonio", x: 34, y: 360, far: true, label: "right" },
 ];
 
 const hub = nodes[0];
@@ -37,7 +49,16 @@ export default function ServiceAreaMap({ className = "" }: { className?: string 
         {nodes
           .filter((n) => !n.hub)
           .map((n) => (
-            <line key={n.name} x1={hub.x} y1={hub.y} x2={n.x} y2={n.y} stroke="rgba(204,183,138,0.7)" strokeWidth={1} />
+            <line
+              key={n.name}
+              x1={hub.x}
+              y1={hub.y}
+              x2={n.x}
+              y2={n.y}
+              stroke="rgba(204,183,138,0.7)"
+              strokeWidth={1}
+              strokeDasharray={n.far ? "3 4" : undefined}
+            />
           ))}
 
         {nodes.map((n) => (
@@ -56,9 +77,9 @@ export default function ServiceAreaMap({ className = "" }: { className?: string 
               <circle cx={n.x} cy={n.y} r={13} fill="none" stroke="#806a3f" strokeWidth={1} className="map-pulse" />
             )}
             <text
-              x={n.x}
-              y={n.hub ? n.y - 14 : n.y - 9}
-              textAnchor="middle"
+              x={n.label === "left" ? n.x - 8 : n.label === "right" ? n.x + 8 : n.x}
+              y={n.hub ? n.y - 14 : n.label ? n.y + 3 : n.y - 9}
+              textAnchor={n.label === "left" ? "end" : n.label === "right" ? "start" : "middle"}
               fontSize={n.hub ? 11 : 8.5}
               fontWeight={n.hub ? 700 : 500}
               letterSpacing={n.hub ? 1.2 : 0.4}
@@ -71,7 +92,7 @@ export default function ServiceAreaMap({ className = "" }: { className?: string 
         ))}
       </svg>
 
-      <div className="absolute bottom-3 left-3 rounded bg-ink/90 px-2.5 py-1 text-[10px] font-semibold tracking-[0.14em] text-steel uppercase">
+      <div className="absolute top-3 left-3 rounded bg-ink/90 px-2.5 py-1 text-[10px] font-semibold tracking-[0.14em] text-steel uppercase">
         Based in South Austin
       </div>
     </div>

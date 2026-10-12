@@ -184,7 +184,7 @@ export const serviceAreas: ServiceArea[] = [
     status: "draft",
     shortDescription: "Roofing, siding, and repair work for San Marcos homes and rental properties.",
     description:
-      "San Marcos is the southern end of our regular service area. Alongside its newer subdivisions, the city has a large stock of older homes and rental properties near downtown and Texas State University — where roof repairs, siding repair, and fresh exterior paint often matter more than a full remodel.",
+      "San Marcos sits about halfway between our South Austin office and San Antonio. Alongside its newer subdivisions, the city has a large stock of older homes and rental properties near downtown and Texas State University — where roof repairs, siding repair, and fresh exterior paint often matter more than a full remodel.",
     seo: {
       title: "San Marcos Roofing & Siding Contractor",
       description:
@@ -196,7 +196,36 @@ export const serviceAreas: ServiceArea[] = [
       intro:
         "From older homes near downtown to newer subdivisions, we handle the roof and siding repairs that keep San Marcos homes and rentals in good shape.",
     },
-    nearby: ["kyle-buda", "austin"],
+    nearby: ["kyle-buda", "san-antonio", "austin"],
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    state: "TX",
+    // Draft until the client confirms local jobs, neighborhoods, or a San Antonio review.
+    status: "draft",
+    shortDescription: "Roofing, siding, and renovation work for San Antonio homeowners, from our team based up I-35 in Austin.",
+    description:
+      "San Antonio is the southern end of our service area, about an hour and a half down I-35 from our South Austin office. We take on roofing, siding, and renovation projects there the same way we do in Austin — starting with a free inspection and a clear price.",
+    seo: {
+      title: "San Antonio Roofing & Renovation Contractor",
+      description:
+        "Roof repair and replacement, siding, painting, and renovations for San Antonio homes from PT Roofing & Renovations. Free roof inspections.",
+    },
+    relatedServices: ["roofing", "siding", "painting", "foundation"],
+    localCopy: {
+      headline: "Roofing & renovations in San Antonio",
+      intro:
+        "We're based in Austin and travel down I-35 for San Antonio projects — roofing, siding, paint, and more, starting with a free inspection.",
+    },
+    faqs: [
+      {
+        question: "You're based in Austin — do you really work in San Antonio?",
+        answer:
+          "Yes. San Antonio is the southern end of our service area. Call or send the form and we'll schedule a time to come out.",
+      },
+    ],
+    nearby: ["san-marcos", "kyle-buda"],
   },
 ];
 

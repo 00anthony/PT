@@ -9,7 +9,7 @@ import { breadcrumbJsonLd, jsonLdScript } from "../../lib/structured-data";
 export const metadata: Metadata = {
   title: "Roofing, Siding & Renovation Services in Austin, TX",
   description:
-    "Roof repair and replacement, free roof inspections, James Hardie siding, painting, decks and patios, windows, and interior remodeling across Greater Austin.",
+    "Roof repair and replacement, free roof inspections, James Hardie siding, painting, decks and patios, windows, foundation repair, and interior remodeling across Greater Austin.",
   alternates: { canonical: "/services" },
 };
 
@@ -30,7 +30,7 @@ export default function ServicesIndexPage() {
         <PageHero
           eyebrow="Our Services"
           title="Roofing, siding & renovations"
-          description="Roofing is the core of what we do — and the same crew handles siding, paint, outdoor living, windows, and interiors across Greater Austin."
+          description="Roofing is the core of what we do — and the same crew handles siding, paint, outdoor living, windows, foundations, and interiors across Greater Austin."
           breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
         />
         <div className="pt-20 md:pt-24">

@@ -11,5 +11,6 @@ export const serviceToCategory: Record<string, FilterValue> = {
   painting: "Painting",
   patios: "Patios",
   windows: "Windows",
+  foundation: "Foundation",
   interior: "Interior",
 };

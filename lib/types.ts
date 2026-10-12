@@ -29,14 +29,14 @@ export type ServiceContent = {
 
 export type Service = {
   slug: string;
-  /** Surfaces this service in the homepage "Featured" set. */
+  /** Shows this service as a card on the homepage. The /services page lists every service. */
   featured?: boolean;
   content: {
     default: ServiceContent;
   };
 };
 
-export type ProjectCategory = "Roofing" | "Siding" | "Painting" | "Patios" | "Windows" | "Interior";
+export type ProjectCategory = "Roofing" | "Siding" | "Painting" | "Patios" | "Windows" | "Foundation" | "Interior";
 
 export type Project = {
   slug: string;

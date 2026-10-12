@@ -30,7 +30,7 @@ export default function ServiceAreasIndexPage() {
         <PageHero
           eyebrow="Service Areas"
           title="Where we work"
-          description="From our office in South Austin, we cover Greater Austin — north to Georgetown and south to San Marcos."
+          description="From our office in South Austin, we cover Greater Austin and the I-35 corridor — north to Georgetown and south to San Antonio."
           breadcrumbs={[{ label: "Home", href: "/" }, { label: "Service Areas" }]}
         />
         <ServiceAreasGrid />

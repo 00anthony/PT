@@ -8,6 +8,9 @@ import { services, projects } from "../../lib/data";
 import { getServiceContent } from "../../lib/audience";
 import { serviceToCategory } from "../../lib/project-filters";
 
+// Homepage: the six featured services. The full list lives on /services.
+const homepageServices = services.filter((s) => s.featured);
+
 export default function Services() {
   return (
     <section id="services" className="relative overflow-hidden bg-ink py-24 md:py-32">
@@ -23,12 +26,12 @@ export default function Services() {
           </h2>
           <p className="mt-5 max-w-lg text-concrete/70">
             Roofing is most of what we do, but the same crew handles siding, paint, outdoor
-            living, windows, and interiors — so bigger projects get done as one job.
+            living, windows, foundations, and interiors — so bigger projects get done as one job.
           </p>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
+          {homepageServices.map((service) => {
             const content = getServiceContent(service);
             const category = serviceToCategory[service.slug];
             const hasProjects = projects.some((p) => p.category === category);
@@ -52,9 +55,14 @@ export default function Services() {
           <p className="mt-4 max-w-md text-sm text-concrete/65">
             We&rsquo;ll tell you honestly whether you need a repair, a replacement, or nothing at all.
           </p>
-          <Button href="#contact" variant="primary" className="mt-8">
-            Schedule a Free Inspection
-          </Button>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Button href="#contact" variant="primary">
+              Schedule a Free Inspection
+            </Button>
+            <Button href="/services" variant="secondary">
+              View All Services
+            </Button>
+          </div>
         </Reveal>
       </Container>
     </section>

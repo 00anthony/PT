@@ -4,7 +4,7 @@ export const siteConfig = {
   shortName: "PT Roofing",
   tagline: "Your Home, Our Craft.",
   description:
-    "PT Roofing & Renovations is a family-owned roofing and home renovation contractor in South Austin — roof repair and replacement, free roof inspections, James Hardie® siding, painting, patios, windows, and interior remodeling across Greater Austin.",
+    "PT Roofing & Renovations is a family-owned roofing and home renovation contractor in South Austin — roof repair and replacement, free roof inspections, James Hardie® siding, painting, patios, windows, foundation repair, and interior remodeling from Georgetown to San Antonio.",
   url: "https://www.ptroofingandrenovations.com",
   phone: "(737) 770-2607",
   phoneHref: "tel:+17377702607",
@@ -29,6 +29,7 @@ export const siteConfig = {
     "Kyle",
     "Buda",
     "San Marcos",
+    "San Antonio",
   ],
   responsePromise: "We get back to every request within 24 hours.",
   // TODO(client): confirm business hours — not published anywhere yet, so

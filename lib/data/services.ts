@@ -2,6 +2,7 @@ import type { Service } from "../types";
 import { siteConfig } from "../site-config";
 
 // Ordered by how often customers ask for each service (per the client).
+// `featured` services are the six cards on the homepage; the /services page lists all of them.
 export const services: Service[] = [
   {
     slug: "roofing",
@@ -196,6 +197,7 @@ export const services: Service[] = [
   },
   {
     slug: "windows",
+    featured: true,
     content: {
       default: {
         name: "Windows",
@@ -215,6 +217,60 @@ export const services: Service[] = [
           title: "Window Replacement in Austin, TX",
           description:
             "Energy-efficient replacement windows for Greater Austin homes from PT Roofing & Renovations. Free estimates.",
+        },
+      },
+    },
+  },
+  {
+    slug: "foundation",
+    featured: true,
+    content: {
+      default: {
+        // TODO(client): confirm exactly which foundation work PT does (slab, pier and beam,
+        // leveling/piers, drainage), whether an engineer's report is part of the process, and
+        // any warranty — then add specifics here. A photo of a real foundation job is also needed.
+        name: "Foundation Repair",
+        short: "Foundation inspections and repair for Central Texas homes.",
+        description:
+          "Foundation inspections and repair for homes on Central Texas clay — find out what's actually going on before small cracks turn into bigger problems.",
+        longDescription:
+          "Much of Central Texas sits on expansive clay soil that swells when it's wet and shrinks when it's dry. That seasonal movement is hard on foundations, and the first signs usually show up inside the house: cracks in drywall or brick, doors and windows that start to stick, or floors that no longer feel level. We'll take a look, explain what we find in plain terms, and give you an honest recommendation and a clear price for the repair.",
+        bullets: [
+          "Foundation inspections and assessments",
+          "Repair for settling and movement",
+          "Clear explanation of what we find",
+          "Honest recommendation and a clear price",
+        ],
+        offerings: [
+          {
+            id: "foundation-inspection",
+            name: "Foundation Inspections",
+            description:
+              "If you're seeing new cracks, sticking doors, or uneven floors, we'll assess the foundation and tell you whether it needs repair now, needs watching, or is nothing to worry about.",
+          },
+          {
+            id: "foundation-repair",
+            name: "Foundation Repair",
+            description:
+              "When a foundation has settled or shifted, we repair it and walk you through the work before it starts, so you know what's being done and why.",
+          },
+        ],
+        faqs: [
+          {
+            question: "What are the signs of a foundation problem?",
+            answer:
+              "Common signs are cracks in drywall, brick, or tile, doors and windows that stick or won't latch, gaps around door frames, and floors that slope. One sign alone doesn't always mean trouble — an inspection tells you for sure.",
+          },
+          {
+            question: "Why do foundations move so much in Central Texas?",
+            answer:
+              "Much of the area is built on expansive clay soil, which swells when wet and shrinks when dry. Long dry summers followed by heavy rain cause the ground under a home to move, and the foundation moves with it.",
+          },
+        ],
+        seo: {
+          title: "Foundation Repair in Austin, TX",
+          description:
+            "Foundation inspections and repair for Greater Austin homes from PT Roofing & Renovations. Free estimates.",
         },
       },
     },

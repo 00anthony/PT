@@ -18,7 +18,7 @@ export default function ServiceHero({
   title?: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden pt-36 pb-20 md:pb-28">
+    <section className="relative isolate overflow-hidden bg-concrete pt-36 pb-20 md:pb-28">
       {content.image && (
         <Image src={content.image} alt="" fill priority sizes="100vw" className="-z-20 object-cover" />
       )}
