@@ -1,4 +1,5 @@
 import type { Service } from "../types";
+import { siteConfig } from "../site-config";
 
 // Ordered by how often customers ask for each service (per the client).
 export const services: Service[] = [
@@ -83,7 +84,7 @@ export const services: Service[] = [
         seo: {
           title: "Austin Roofing Repair & Replacement",
           description:
-            "Roof repair and replacement in Austin and surrounding cities. Metal and shingle roofing, plus free roof inspections. Call PT Roofing & Renovations at (512) 999-4366.",
+            `Roof repair and replacement in Austin and surrounding cities. Metal and shingle roofing, plus free roof inspections. Call PT Roofing & Renovations at ${siteConfig.phone}.`,
         },
       },
     },

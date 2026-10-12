@@ -6,8 +6,8 @@ export const siteConfig = {
   description:
     "PT Roofing & Renovations is a family-owned roofing and home renovation contractor in South Austin — roof repair and replacement, free roof inspections, James Hardie® siding, painting, patios, windows, and interior remodeling across Greater Austin.",
   url: "https://www.ptroofingandrenovations.com",
-  phone: "(512) 999-4366",
-  phoneHref: "tel:+15129994366",
+  phone: "(737) 770-2607",
+  phoneHref: "tel:+17377702607",
   email: "ptroofingandrenovations.info@gmail.com",
   // Must match the Google Business Profile exactly (name, address, phone).
   address: {

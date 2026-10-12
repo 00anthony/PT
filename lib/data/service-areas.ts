@@ -1,4 +1,5 @@
 import type { ServiceArea } from "../types";
+import { siteConfig } from "../site-config";
 
 /**
  * Every area page needs content that is genuinely about that city — a real
@@ -61,7 +62,7 @@ export const serviceAreas: ServiceArea[] = [
     seo: {
       title: "Round Rock Roofing & Siding Contractor",
       description:
-        "Roof repair, roof replacement, and siding replacement for Round Rock homes. Free roof inspections. PT Roofing & Renovations — (512) 999-4366.",
+        `Roof repair, roof replacement, and siding replacement for Round Rock homes. Free roof inspections. PT Roofing & Renovations — ${siteConfig.phone}.`,
     },
     relatedServices: ["roofing", "siding", "painting", "windows"],
     localCopy: {

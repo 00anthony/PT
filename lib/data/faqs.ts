@@ -1,4 +1,5 @@
 import type { FAQ } from "../types";
+import { siteConfig } from "../site-config";
 
 // General questions for the homepage. Service- and city-specific questions
 // live on the service and service-area data so each page's FAQ is its own.
@@ -21,7 +22,7 @@ export const faqs: FAQ[] = [
   {
     question: "How quickly will you get back to me?",
     answer:
-      "We get back to every request within 24 hours. For the fastest response, call or text us at (512) 999-4366.",
+      `We get back to every request within 24 hours. For the fastest response, call or text us at ${siteConfig.phone}.`,
   },
   {
     question: "Can you handle roofing and siding on the same project?",
