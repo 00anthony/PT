@@ -202,9 +202,9 @@ export default function ContactForm({
             <Label htmlFor="contactTime">Best Time</Label>
             <select id="contactTime" name="contactTime" defaultValue="" className={inputClass}>
               <option value="">Any time</option>
-              <option value="Morning (8am–12pm)">Morning (8am–12pm)</option>
+              <option value="Morning (10am–12pm)">Morning (10am–12pm)</option>
               <option value="Afternoon (12pm–5pm)">Afternoon (12pm–5pm)</option>
-              <option value="Evening (5pm–8pm)">Evening (5pm–8pm)</option>
+              <option value="Evening (5pm–7pm)">Evening (5pm–7pm)</option>
             </select>
           </div>
 

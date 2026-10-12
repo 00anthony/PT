@@ -17,7 +17,7 @@ export const faqs: FAQ[] = [
   {
     question: "What services do you offer?",
     answer:
-      "Roof repair and replacement (metal and shingle), James Hardie® siding, interior and exterior painting, decks and patios, replacement windows, foundation repair, and interior remodeling including flooring and trim.",
+      "Roof repair and replacement (metal and shingle), James Hardie® siding, interior and exterior painting, decks and patios, replacement windows, foundation repair and new foundations, and interior remodeling including flooring and trim.",
   },
   {
     question: "How quickly will you get back to me?",

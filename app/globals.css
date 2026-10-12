@@ -73,8 +73,13 @@
   animation: map-pulse 3s ease-out infinite;
 }
 
-* {
-  border-color: var(--charcoal-2);
+/* Default border color. In the base layer so Tailwind's border-color utilities can override it. */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--charcoal-2);
+  }
 }
 
 html {

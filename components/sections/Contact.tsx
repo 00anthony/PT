@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Check } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Check } from "lucide-react";
 import Container from "../../components/ui/Container";
 import Eyebrow from "../../components/ui/Eyebrow";
 import Reveal from "../../components/ui/Reveal";
@@ -34,7 +34,7 @@ export default function Contact({
             {heading ?? "Let’s take a look at your project"}
           </h2>
           <p className="mt-5 max-w-md text-concrete/70">
-            {siteConfig.responsePromise} Tell us what&rsquo;s going on, or call and talk to us directly.
+            {siteConfig.responsePromise}{" "}Tell us what&rsquo;s going on, or call and talk to us directly.
           </p>
         </Reveal>
 
@@ -65,6 +65,17 @@ export default function Contact({
                 <br />
                 {address.city}, {address.region} {address.postalCode}
               </a>
+            </ContactRow>
+
+            <ContactRow icon={<Clock className="h-4 w-4 text-oxblood-light" />} label="Hours">
+              <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-0.5 text-concrete">
+                {siteConfig.hours.map((h) => (
+                  <div key={h.label} className="contents">
+                    <dt className="text-concrete/70">{h.label}</dt>
+                    <dd>{h.time}</dd>
+                  </div>
+                ))}
+              </dl>
             </ContactRow>
 
             <div className="rounded-xl border border-charcoal-2 bg-ink p-5">

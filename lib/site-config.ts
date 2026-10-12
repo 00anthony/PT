@@ -32,12 +32,17 @@ export const siteConfig = {
     "San Antonio",
   ],
   responsePromise: "We get back to every request within 24 hours.",
-  // TODO(client): confirm business hours — not published anywhere yet, so
-  // they're left out of the structured data until confirmed.
-  hours: null as string | null,
+  // Keep in sync with the hours on the Google Business Profile.
+  // `days` are schema.org day names; `opens`/`closes` are 24h for structured data.
+  hours: [
+    { label: "Mon–Thu", time: "10 AM–7 PM", days: ["Monday", "Tuesday", "Wednesday", "Thursday"], opens: "10:00", closes: "19:00" },
+    { label: "Fri", time: "10 AM–5 PM", days: ["Friday"], opens: "10:00", closes: "17:00" },
+    { label: "Sat", time: "10 AM–2 PM", days: ["Saturday"], opens: "10:00", closes: "14:00" },
+    { label: "Sun", time: "Closed", days: ["Sunday"], opens: null, closes: null },
+  ],
   social: {
-    facebook: null as string | null,
-    instagram: null as string | null,
+    facebook: "https://www.facebook.com/p/PT-Roofing-Renovations-61573260260716/",
+    instagram: "https://www.instagram.com/itsptrenovations/",
   },
   google: {
     gmbUrl: "https://g.page/r/CQQlxnIwxulYEAI",

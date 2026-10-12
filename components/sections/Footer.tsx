@@ -20,12 +20,40 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
-              <Image src={media.logo.icon} alt="" width={44} height={48} className="h-12 w-auto shrink-0" />
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-white">
+                <Image src={media.logo.icon} alt="" width={44} height={48} className="h-11 w-auto" />
+              </span>
               <span className="font-display text-lg leading-5">PT Roofing &amp; Renovations</span>
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               Family-owned roofing and renovation contractor serving {siteConfig.serviceArea}.
             </p>
+            <div className="mt-6 flex gap-3">
+              <a
+                href={siteConfig.social.facebook}
+                aria-label="PT Roofing & Renovations on Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-md border border-white/15 text-white/70 hover:border-oxblood hover:text-oxblood"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                  <path d="M13.5 21v-8.15h2.73l.41-3.17h-3.14V7.67c0-.92.25-1.54 1.57-1.54h1.68V3.3A22.6 22.6 0 0 0 14.4 3.2c-2.35 0-3.96 1.43-3.96 4.07v2.41H7.7v3.17h2.74V21h3.06Z" />
+                </svg>
+              </a>
+              <a
+                href={siteConfig.social.instagram}
+                aria-label="PT Roofing & Renovations on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-md border border-white/15 text-white/70 hover:border-oxblood hover:text-oxblood"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+                  <circle cx="12" cy="12" r="3.6" />
+                  <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div>
@@ -95,6 +123,13 @@ export default function Footer() {
                   <br />
                   {address.city}, {address.region} {address.postalCode}
                 </a>
+              </li>
+              <li className="pt-1 text-white/60">
+                {siteConfig.hours.map((h) => (
+                  <span key={h.label} className="block">
+                    {h.label}: {h.time}
+                  </span>
+                ))}
               </li>
             </ul>
           </div>

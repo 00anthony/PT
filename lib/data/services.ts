@@ -226,33 +226,49 @@ export const services: Service[] = [
     featured: true,
     content: {
       default: {
-        // TODO(client): confirm exactly which foundation work PT does (slab, pier and beam,
-        // leveling/piers, drainage), whether an engineer's report is part of the process, and
-        // any warranty — then add specifics here. A photo of a real foundation job is also needed.
-        name: "Foundation Repair",
-        short: "Foundation inspections and repair for Central Texas homes.",
+        // TODO(client): add specifics when available — repair methods used, whether an
+        // engineer's report is part of the process, and any warranty on the work.
+        name: "Foundation Repair & Construction",
+        short: "Foundation repair, new foundations, and pier and beam work.",
         description:
-          "Foundation inspections and repair for homes on Central Texas clay — find out what's actually going on before small cracks turn into bigger problems.",
+          "Foundation repair, leveling, and new foundations for homes on Central Texas clay — slab and pier and beam, from a first inspection to the finished job.",
         longDescription:
-          "Much of Central Texas sits on expansive clay soil that swells when it's wet and shrinks when it's dry. That seasonal movement is hard on foundations, and the first signs usually show up inside the house: cracks in drywall or brick, doors and windows that start to stick, or floors that no longer feel level. We'll take a look, explain what we find in plain terms, and give you an honest recommendation and a clear price for the repair.",
+          "Much of Central Texas sits on expansive clay soil that swells when it's wet and shrinks when it's dry. That seasonal movement is hard on foundations, and the first signs usually show up inside the house: cracks in drywall or brick, doors and windows that start to stick, or floors that no longer feel level. We handle every kind of foundation work — repairing and leveling foundations that have settled, pouring new foundations for homes, additions, and garages, and repairing pier and beam systems under older homes. It starts with a look at what's actually going on, an explanation in plain terms, and a clear price.",
         bullets: [
+          "Foundation repair and leveling",
+          "New foundations for homes, additions, and garages",
+          "Slab and pier and beam foundations",
           "Foundation inspections and assessments",
-          "Repair for settling and movement",
-          "Clear explanation of what we find",
           "Honest recommendation and a clear price",
         ],
+        image: "/images/services/foundation-repair.webp",
         offerings: [
+          {
+            id: "foundation-repair",
+            name: "Foundation Repair & Leveling",
+            description:
+              "When a foundation has settled or shifted, we stabilize it and bring the house back toward level, then walk you through the work before it starts so you know what's being done and why. Catching movement early usually means a smaller repair.",
+            points: ["Settling and sinking", "Cracks in brick, drywall, and tile", "Sticking doors and sloping floors"],
+          },
+          {
+            id: "new-foundations",
+            name: "New Foundations",
+            description:
+              "New foundations for new homes, room additions, garages, and workshops. On clay soil, what happens before the concrete is poured — site preparation, grading, and reinforcement — decides how the foundation performs for decades, so that's where we put the attention.",
+            points: ["New home construction", "Room additions", "Garages and workshops"],
+          },
+          {
+            id: "pier-and-beam",
+            name: "Pier & Beam Foundations",
+            description:
+              "Many older Central Texas homes sit on pier and beam foundations. We repair and re-level them — addressing settled piers, sagging floors, and worn or damaged beams and joists under the house.",
+            points: ["Re-leveling", "Sagging or bouncy floors", "Beam and joist repair"],
+          },
           {
             id: "foundation-inspection",
             name: "Foundation Inspections",
             description:
-              "If you're seeing new cracks, sticking doors, or uneven floors, we'll assess the foundation and tell you whether it needs repair now, needs watching, or is nothing to worry about.",
-          },
-          {
-            id: "foundation-repair",
-            name: "Foundation Repair",
-            description:
-              "When a foundation has settled or shifted, we repair it and walk you through the work before it starts, so you know what's being done and why.",
+              "If you're seeing new cracks, sticking doors, or uneven floors — or you're buying or selling a home — we'll assess the foundation and tell you whether it needs repair now, needs watching, or is nothing to worry about.",
           },
         ],
         faqs: [
@@ -266,11 +282,21 @@ export const services: Service[] = [
             answer:
               "Much of the area is built on expansive clay soil, which swells when wet and shrinks when dry. Long dry summers followed by heavy rain cause the ground under a home to move, and the foundation moves with it.",
           },
+          {
+            question: "Do you work on both slab and pier and beam foundations?",
+            answer:
+              "Yes. We repair and level concrete slab foundations and pier and beam foundations, and we build new foundations of both types.",
+          },
+          {
+            question: "Do you pour foundations for new construction and additions?",
+            answer:
+              "Yes. We build new foundations for new homes, room additions, garages, and workshops, as well as repairing existing ones.",
+          },
         ],
         seo: {
           title: "Foundation Repair in Austin, TX",
           description:
-            "Foundation inspections and repair for Greater Austin homes from PT Roofing & Renovations. Free estimates.",
+            "Foundation repair and leveling, new foundations, and pier and beam work for Greater Austin homes from PT Roofing & Renovations. Free estimates.",
         },
       },
     },

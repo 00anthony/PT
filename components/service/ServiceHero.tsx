@@ -32,7 +32,7 @@ export default function ServiceHero({
           {siteConfig.name}
         </p>
 
-        <h1 className="max-w-3xl font-display text-5xl text-white sm:text-6xl md:text-7xl">{title ?? content.name}</h1>
+        <h1 className="max-w-3xl font-display text-3xl text-white text-balance sm:text-5xl md:text-6xl lg:text-7xl">{title ?? content.name}</h1>
 
         <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">{content.description}</p>
 

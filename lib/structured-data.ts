@@ -30,6 +30,14 @@ export function businessJsonLd() {
           addressCountry: "US",
         },
         areaServed: siteConfig.serviceAreaCities.map((city) => ({ "@type": "City", name: `${city}, TX` })),
+        openingHoursSpecification: siteConfig.hours
+          .filter((h) => h.opens && h.closes)
+          .map((h) => ({
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: h.days,
+            opens: h.opens,
+            closes: h.closes,
+          })),
         sameAs,
       },
       {
